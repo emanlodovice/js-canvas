@@ -1,8 +1,8 @@
 // constants
-heliWidth = 60;
-heliHeight = 70;
+heliWidth = 40;
+heliHeight = 25;
 planeWidth = 80;
-planeHeight = 90;
+planeHeight = 50;
 heliSpeedX = -2;
 
 planeSpeed = 5;
@@ -84,8 +84,6 @@ function moveHelis() {
     for (var i=bullets.length - 1; i >= 0; i--) {
         bullets[i].move();
         var hasRemove = false;
-        console.log(helis.length);
-        console.log(bullets.length);
         for (var j=helis.length - 1; j >= 0; j--) {
             // console.log(i);
             // console.log(bullets.length);
