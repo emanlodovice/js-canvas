@@ -84,11 +84,18 @@ function moveHelis() {
     for (var i=bullets.length - 1; i >= 0; i--) {
         bullets[i].move();
         var hasRemove = false;
+        console.log(helis.length);
+        console.log(bullets.length);
         for (var j=helis.length - 1; j >= 0; j--) {
-            if (checkCollision(bullets[i].gameOb, helis[j].gameOb)) {
-                bullets.splice(i, 1);
-                helis.splice(j, 1);
-                hasRemove = true;
+            // console.log(i);
+            // console.log(bullets.length);
+            // console.log(bullets[i].gameOb);
+            if (i < bullets.length) {
+                if (checkCollision(bullets[i].gameOb, helis[j].gameOb)) {
+                    bullets.splice(i, 1);
+                    helis.splice(j, 1);
+                    hasRemove = true;
+                }
             }
         }
         if (!hasRemove) {
